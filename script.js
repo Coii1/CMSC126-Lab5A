@@ -45,5 +45,23 @@ async function loadHeroes() {
     }
   }
 
-  // Load heroes after load sng page
-  loadHeroes();
+// Function to filter heroes based on search input
+function searchHeroes() {
+  const searchInput = document.getElementById('search-bar').value.toLowerCase();
+  const heroes = document.querySelectorAll('.hero');
+  
+  heroes.forEach(hero => {
+    const name = hero.querySelector('div').textContent.toLowerCase(); // Get the hero name
+    if (name.includes(searchInput)) {
+      hero.style.display = 'block'; // Show the hero
+    } else {
+      hero.style.display = 'none'; // Hide the hero
+    }
+  });
+}
+
+// Add event listener to the search bar after the page is loaded
+document.getElementById('search-bar').addEventListener('keyup', searchHeroes);
+
+// Load heroes after the page loads
+loadHeroes();

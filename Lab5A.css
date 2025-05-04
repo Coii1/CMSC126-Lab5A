@@ -55,3 +55,17 @@ body {
     padding: 5px;
     border-radius: 5px;
   }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #search-bar {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #292929;
+    color: #fff;
+  }
